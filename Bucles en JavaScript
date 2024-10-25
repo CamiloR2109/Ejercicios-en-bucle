@@ -1,0 +1,130 @@
+// script.js
+
+function presentarMensaje() {
+  let mensaje = document.getElementById('mensaje').value; // Obtiene el valor del input
+  let n = parseInt(document.getElementById('cantidad').value); // Obtiene el valor numérico del input
+  let resultado = '';
+
+  for (let i = 0; i < n; i++) {
+    resultado += mensaje + '\n';
+  }
+
+  document.getElementById('resultado').textContent = resultado; // Muestra el resultado en el div
+}
+
+function multiplosDe7() {
+  let n = parseInt(document.getElementById('numero').value); // Asume un input con id 'numero'
+  let resultado = '';
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 7 === 0) {
+      resultado += i + ' ';
+    }
+  }
+
+  document.getElementById('resultado').textContent = resultado; // Muestra el resultado en el div
+}
+
+function multiplosDeCualquierNumero() {
+  let numero = parseInt(document.getElementById('numero').value); // Asume un input con id 'numero'
+  let n = parseInt(document.getElementById('limite').value); // Asume un input con id 'limite'
+  let resultado = '';
+
+  for (let i = 1; i <= n; i++) {
+    if (i % numero === 0) {
+      resultado += i + ' ';
+    }
+  }
+
+  document.getElementById('resultado').textContent = resultado; // Muestra el resultado en el div
+}
+
+function numerosPositivos() {
+  let numeros = document.getElementById('numeros').value; // Asume un input con id 'numeros'
+  let arr = numeros.split(',').map(Number);
+  let resultado = '';
+
+  arr.forEach(num => {
+    if (num > 0) {
+      resultado += num + ' ';
+    }
+  });
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function numerosPares() {
+  let numeros = document.getElementById('numeros').value; // Asume un input con id 'numeros'
+  let arr = numeros.split(',').map(Number);
+  let resultado = '';
+
+  arr.forEach(num => {
+    if (num % 2 === 0) {
+      resultado += num + ' ';
+    }
+  });
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function divisoresDeNumero() {
+  let numero = parseInt(document.getElementById('numero').value); // Asume un input con id 'numero'
+  let resultado = '';
+
+  for (let i = 1; i <= numero; i++) {
+    if (numero % i === 0) {
+      resultado += i + ' ';
+    }
+  }
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function tablaDeSumar() {
+  let resultado = '';
+
+  for (let i = 1; i <= 12; i++) {
+    resultado += `10 + ${i} = ${10 + i}\n`;
+  }
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function tablaDeMultiplicar() {
+  let numero = parseInt(document.getElementById('numero').value); // Asume un input con id 'numero'
+  let inicio = parseInt(document.getElementById('inicio').value); // Asume un input con id 'inicio'
+  let fin = parseInt(document.getElementById('fin').value); // Asume un input con id 'fin'
+  let resultado = '';
+
+  for (let i = inicio; i <= fin; i++) {
+    resultado += numero + ' x ' + i + ' = ' + (numero * i) + '\n';
+  }
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function numerosEntreDosNumeros() {
+  let num1 = parseInt(document.getElementById('num1').value); // Asume un input con id 'num1'
+  let num2 = parseInt(document.getElementById('num2').value); // Asume un input con id 'num2'
+  let resultado = '';
+
+  for (let i = num1; i <= num2; i++) {
+    resultado += i + ' ';
+  }
+
+  document.getElementById('resultado').textContent = resultado;
+}
+
+function numerosParesEntreDosNumeros() {
+  let num1 = parseInt(document.getElementById('num1').value); // Asume un input con id 'num1'
+  let num2 = parseInt(document.getElementById('num2').value); // Asume un input con id 'num2'
+  let resultado = '';
+
+  for (let i = num1; i <= num2; i++) {
+    if (i % 2 === 0) {
+      resultado += i + ' ';
+    }
+  }
+
+  document.getElementById('resultado').textContent = resultado;
+}
